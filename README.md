@@ -166,26 +166,23 @@ Hash routing                // SPA navigation compatible with Capacitor WebView
 ## Architecture
 
 ```mermaid
-flowchart TB
-    subgraph clients ["Clients"]
-        Web["Browser SPA"]
-        Android["Capacitor Android"]
+graph TB
+    subgraph clients [Clients]
+        Web[Browser SPA]
+        Android[Capacitor Android]
     end
-
-    subgraph frontend ["React 19 + Vite + Tailwind"]
-        App["App Router (hash-based)"]
-        AuthCtx["AuthContext"]
-        ClinicCtx["ClinicContext"]
-        Pages["10 routed pages"]
-        Services["Service layer"]
+    subgraph frontend [React 19 / Vite / Tailwind]
+        App[App Router hash-based]
+        AuthCtx[AuthContext]
+        ClinicCtx[ClinicContext]
+        Pages[10 routed pages]
+        Services[Service layer]
     end
-
-    subgraph backend ["Supabase Cloud"]
-        PG[("PostgreSQL")]
-        RPC["11 RPC functions"]
-        RLS["Row Level Security"]
+    subgraph backend [Supabase Cloud]
+        PG[(PostgreSQL)]
+        RPC[11 RPC functions]
+        RLS[Row Level Security]
     end
-
     Web --> App
     Android --> App
     App --> AuthCtx
