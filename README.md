@@ -82,14 +82,7 @@ The system runs as a responsive web app and an Android app (via Capacitor), and 
 
 ## Source Code
 
-> **The source code is private, but I'm happy to give access to recruiters who'd like to review the implementation.**
-
-**What I can share on request:**
-
-- Full application code (React 19 + TypeScript)
-- Supabase schema, RLS policies, and RPC functions
-- Capacitor Android configuration
-- Architecture docs and feature implementation details
+> **The source code is private.**
 
 ---
 
